@@ -1,0 +1,37 @@
+<div class="table-container">
+  <div class="table-wrapper">
+    <h1>Prodcuts list</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Created At</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- show indector for fetching data -->
+        <tr class="loading" *ngIf="isLoadingProducts">
+          <td colspan="5">Fetching data...</td>
+        </tr>
+        <tr *ngFor="let product of products">
+          <td class="image">
+            <img src="{{ product.image }}" alt="product image" />
+          </td>
+          <td class="name">{{ product.name }}</td>
+          <td class="price">${{ product.price / 100 }}</td>
+          <td class="createdAt">
+            {{ product.createdAt | date: "dd/MM/YYYY-MM:ss" }}
+          </td>
+          <td>
+            <button class="delete-button" (click)="deletProduct(product.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

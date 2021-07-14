@@ -1,0 +1,23 @@
+<div class="admin-section">
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a
+          routerLinkActive="active"
+          routerLink="/admin"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          All products
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="./add-product">
+          Add new product
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

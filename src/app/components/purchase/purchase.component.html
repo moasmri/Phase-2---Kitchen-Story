@@ -1,0 +1,19 @@
+<div class="purchase">
+  <div class="container">
+    <h1>Confirm order</h1>
+    <hr />
+    <div class="item-container">
+      <div class="item-img-container">
+        <img src="{{ product.image }}" alt="product image" />
+      </div>
+      <div class="item-details">
+        <div class="item-name">{{ product.name }}</div>
+        <div class="item-price">${{ product.price / 100 }}</div>
+      </div>
+    </div>
+    <hr />
+    <a routerLink="../../thank-you">
+      <button>Confirm</button>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #206d2a;
+  --mainWhite: #fff;
+  --mainBlack: #22222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+
+/* --------------- Navbar ---------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #569c71;
+  z-index: 1;
+}
+
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.navbar-center img {
+  height: 40px;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+}
+
+.navbar .navbar-center .right-navbar a,
+.navbar .navbar-center .right-navbar a.signin {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+.navbar .navbar-center .right-navbar a {
+  cursor: pointer;
+  color: #222222;
+}
+.navbar .navbar-center .right-navbar a.signin {
+  color:#fff;
+}
+.navbar .navbar-center .right-navbar a:hover {
+  color: var(--primaryColor);
+}
+.navbar .navbar-center .right-navbar a.signin:hover {
+  color: #222222;
+}
+
+/* --------------- End of Navbar ---------------- */
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  // background: url("~src/assets/images/hero-bg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 2rem;
+}
+
+.banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+  color: #334854;
+}
+
+.banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.banner-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    padding: 2rem 0;
+  }
+}
+
+/* --------------- End of Hero ---------------- */
+/* --------------- Products ---------------- */
+
+.products {
+  padding: 4rem 0;
+}
+
+.section-title h2 {
+  color: #334854;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.products-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .bag-btn {
+    transform: translate(0);
+  }
+}
+
+.product-img {
+  display: block;
+  width: 9rem;
+  margin: auto;
+  transition: var(--mainTransition);
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.product h3 {
+  color: #334854;
+  transition: color 0.3s ease-in-out;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product h3:hover {
+  color: var(--primaryColor);
+}
+
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  color: #2b5f40;
+  font-size: 18px;
+  line-height: 1.6;
+  border: 1px solid #2b5f40 !important;
+  background: transparent;
+  padding: 12px 40px;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  border: 1px solid #2b5f40 !important;
+  background: #2b5f40;
+  color: #ffffff;
+}
+
+/* ---------------End of Products ---------------- */
+/* start footer */
+.footer {
+  background-color: #e7e2dd;
+  color: var(--mainBlack);
+  padding: 2px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: var(--mainBlack);
+}
+/* end footer */

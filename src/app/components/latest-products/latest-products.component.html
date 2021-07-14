@@ -1,0 +1,24 @@
+<!-- product -->
+<section id="latest-products" class="products">
+  <div class="section-title">
+    <h2>latest products</h2>
+  </div>
+  <div class="products-center">
+    <!-- single product -->
+    <article class="product" *ngFor="let product of products">
+      <a routerLink="products/{{ product.id }}">
+        <div class="img-container">
+          <img src="{{ product.image }}" alt="prudct1" class="product-img" />
+          <!-- <button class="bag-btn">
+              <i class="fas fa-shopping-cart"></i>add to cart
+            </button> -->
+        </div>
+        <h3>{{ product.name }}</h3>
+      </a>
+      <h4>${{ product.price / 100 }}</h4>
+    </article>
+
+    <!-- end of single product -->
+  </div>
+</section>
+<!-- end of product -->

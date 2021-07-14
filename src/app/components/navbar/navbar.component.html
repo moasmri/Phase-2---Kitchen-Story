@@ -1,0 +1,24 @@
+<!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-center">
+    <a routerLink="/"
+      ><img src="../../../assets/images/logo.png" alt="logo"
+    /></a>
+    <div class="right-navbar">
+      <a *ngIf="authService.isLoggedIn" routerLink="/admin"> Admin </a>
+      <a routerLink="/"> Home </a>
+      <a routerLink="/products"> Products </a>
+      <a
+        class="logout"
+        *ngIf="authService.isLoggedIn"
+        (click)="authService.logout()"
+      >
+        Logout
+      </a>
+      <a *ngIf="!authService.isLoggedIn" class="signin" routerLink="/sign-in">
+       Sign in
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar -->
